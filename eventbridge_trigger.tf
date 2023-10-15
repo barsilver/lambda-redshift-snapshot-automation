@@ -4,12 +4,9 @@ resource "aws_cloudwatch_event_rule" "redshift_snapshot_trigger" {
 
   event_pattern = <<EOF
   {
-    "source": ["aws.redshift"],
+    "source": ["redshift-serverless.amazonaws.com"],
     "detail": {
       "eventName": ["CreateSnapshot"]
-    },
-    "requestParameters": {
-      "snapshotType": ["serverless"]
     }
   }
   EOF
