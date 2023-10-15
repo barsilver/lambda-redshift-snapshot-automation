@@ -11,5 +11,3 @@ resource "aws_cloudwatch_event_rule" "redshift_snapshot_trigger" {
   }
   EOF
 }
-
-# Maybe sourceType instead of snapshotType.
