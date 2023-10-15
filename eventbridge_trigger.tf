@@ -1,6 +1,6 @@
 resource "aws_cloudwatch_event_rule" "redshift_snapshot_trigger" {
   name        = "redshift_snapshot_trigger"
-  description = ""
+  description = "Triggers Lambda when a Redshift serverless snapshot is created."
 
   event_pattern = <<EOF
   {
